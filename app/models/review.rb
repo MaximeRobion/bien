@@ -12,8 +12,11 @@ class Review < ApplicationRecord
   validates :restaurant, presence: true
   validates :address, presence: true
 
+  profanity_filter :body
+  profanity_filter :title 
+
   def to_param
     id.to_s + "-" + title.parameterize
   end
-  
+
 end
