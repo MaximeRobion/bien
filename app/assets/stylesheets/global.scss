@@ -67,6 +67,7 @@ input[type=submit]{
   background: $orange;
   color: white;
   border-color: $orange;
+  cursor: pointer;
 }
 textarea {
   min-height: 400px;
