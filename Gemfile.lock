@@ -37,6 +37,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     activejob (6.0.3)
       activesupport (= 6.0.3)
       globalid (>= 0.3.6)
@@ -116,6 +119,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     public_suffix (4.0.5)
     puma (4.3.3)
       nio4r (~> 2.0)
@@ -229,12 +233,14 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  active_link_to (~> 1.0, >= 1.0.5)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   geocoder (~> 1.6, >= 1.6.3)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  pg (~> 1.2, >= 1.2.3)
   puma (~> 4.1)
   rails (~> 6.0.3)
   sass-rails (>= 6)

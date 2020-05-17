@@ -5,8 +5,15 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+group :development do
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+end
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -33,6 +40,9 @@ gem 'geocoder', '~> 1.6', '>= 1.6.3'
 
 #form made Easy
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
+
+#make our filters active
+gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,5 +1,8 @@
 class Review < ApplicationRecord
 
+  #add association : one-to-many relationship
+  has_many :comments
+
   geocoded_by :address
   after_validation :geocode
 
@@ -12,7 +15,5 @@ class Review < ApplicationRecord
   def to_param
     id.to_s + "-" + title.parameterize
   end
-
-
-
+  
 end
