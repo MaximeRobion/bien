@@ -52,6 +52,18 @@ gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 #filter the swear words
 gem 'profanity_filter', '~> 0.1.1'
 
+#add admin panel
+gem 'activeadmin'
+# Plus integrations with:
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
+
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
