@@ -1,5 +1,9 @@
 <h2>All users</h2>
 
 <% @users.each do |user| %>
-<p> <%= user.username %> (<%= user.email %>) </p>
+
+<p class="user-profile"> <% if user.avatar.present? %>
+<%= image_tag user.avatar.url, class: "avatar" %>
+<% end %>
+<%= user.username %> (<%= user.email %>) </p>
 <% end %>

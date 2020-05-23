@@ -22,7 +22,16 @@ h1, h2, h3, h4, h5 {
 }
 
 header, main, footer {
-  padding: 20px 30px 20px 30px;
+  padding: 1.5rem 2rem;
+}
+
+main {
+  width: 100%;
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
 }
 
 a {
@@ -40,6 +49,13 @@ header {
   }
   img {
     width: 80px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
   }
 }
 
@@ -112,4 +128,26 @@ nav.filters {
     color: #999999;
     font-size: 12px;
   }
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.avatar-big {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
 }

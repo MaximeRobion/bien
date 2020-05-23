@@ -1,2 +1,5 @@
+<% if @user.avatar.present? %>
+<%= image_tag @user.avatar.url, class: "avatar-big" %>
+<% end %>
 <h2><%= @user.username %></h2>
 <p>Their email is <%= @user.email %> </p>

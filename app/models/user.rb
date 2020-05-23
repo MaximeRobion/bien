@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  mount_uploader :avatar, AvatarUploader
+  
   has_many :reviews
   has_many :comments
   has_many :bookmarks
