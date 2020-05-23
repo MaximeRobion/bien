@@ -24,7 +24,9 @@
         <% if @current_user.avatar.present? %>
         <%= image_tag @current_user.avatar.url, class: "avatar" %>
         <% end %>
+        <%= link_to edit_user_path(@current_user) do %>
         <%= @current_user.username %>
+        <% end %>
         </p>
 
         <% if @current_user.is_admin? %>

@@ -30,6 +30,24 @@ class UsersController < ApplicationController
     end
   end
 
+
+    def edit
+      @user = @current_user
+    end
+
+    def update
+        #find the individual review
+        @user = @current_user
+
+          #update with the new form info
+          if @user.update(form_params)
+          #redirect somewhere new
+          redirect_to users_path(@user)
+          else
+            render "edit"
+          end  
+      end
+
   def form_params
     params.require(:user).permit(:avatar, :username, :email, :password, :password_confirmation)
   end
