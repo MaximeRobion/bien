@@ -22,10 +22,9 @@
         <% if is_logged_in? %>
         <p class="user-profile">
         <% if @current_user.avatar.present? %>
-        <%= image_tag @current_user.avatar.url, class: "avatar" %>
-        <% end %>
-        <%= link_to edit_user_path(@current_user) do %>
-        <%= @current_user.username %>
+          <%= image_tag @current_user.avatar.url, class: "avatar" %>
+          <% else %>
+          <%= @current_user.username %>
         <% end %>
         </p>
 
@@ -34,6 +33,7 @@
         <% end %>
 
         <%= link_to "Add a review", new_review_path %>
+        <%= link_to "Edit Account", edit_account_path %>
         <%= link_to "Log out", session_path, method: :delete %>
         <% else %>
         <%= link_to "Sign Up", new_user_path %>
@@ -41,6 +41,12 @@
         <% end %>
       </nav>
     </header>
+
+    <% if flash[:success].present? %>
+    <div class="success">
+      <%= flash[:success] %>
+    </div>
+    <% end %>
 
     <main>
       <%= yield %>

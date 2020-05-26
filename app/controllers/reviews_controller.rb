@@ -48,6 +48,7 @@ before_action :check_login, except: [:index, :show]
     #save this to the database
     if @review.save
     #redirect back to the homepage
+      flash[:success] = "Your review was posted!"
       redirect_to root_path
     else
       #show the view for new.html.erb
@@ -95,6 +96,7 @@ before_action :check_login, except: [:index, :show]
       else
         #update with the new form info
         if @review.update(form_params)
+          flash[:success] = "Your review was updated!"
         #redirect somewhere new
         redirect_to review_path(@review)
         else
