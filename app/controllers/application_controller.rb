@@ -41,7 +41,7 @@ end
     if @current_user.present? and @current_user.is_admin?
       @current_user
     else
-      nil 
+      nil
     end
   end
 
